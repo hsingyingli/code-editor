@@ -5,6 +5,7 @@ export const SignInPageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: black;
 `
 
 
@@ -15,6 +16,7 @@ export const LoginForm = styled.form`
   max-width: 90%;
   padding: 1rem;
   border-radius: 0.6rem;
+  box-shadow: 0px 0px 15px gray;
   background-color:RGBA(0, 0, 0, 0.2) ;
 
   span {
@@ -31,9 +33,6 @@ export const LoginForm = styled.form`
     color: ${({ theme }) => theme.colors.teal['500']};
   }
 
-  :hover {
-    background-color:RGBA(0, 0, 0, 0.15);
-  }
 `
 
 export const Logo = styled.h1`
@@ -48,10 +47,11 @@ export const Logo = styled.h1`
 
 export const Label = styled.label`
   margin: 0.25rem;
-  font-size: ${({ theme }) => theme.fonts.fontSizes.md};
+  font-size: ${({ theme }) => theme.fonts.fontSizes.xl};
 `
 export const Input = styled.input`
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 5px;
   font-size: ${({ theme }) => theme.fonts.fontSizes.md};
   border-radius: 5px;
