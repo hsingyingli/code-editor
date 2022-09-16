@@ -20,20 +20,15 @@ const SignIn: NextPage = () => {
     const toastId = toast.loading('Loading...');
 
     setEmail("")
-    //if (error) {
-    //console.log(error)
-    //toast.error('Something went wrong. Please try later', { id: toastId });
-    //return
-    //}
     toast.success('Magic Link is sent to your email. Please checkout your email', { id: toastId });
   }
 
   return (
-    <Layout type='Sign in'>
+    <Layout type='Sign up'>
       <SignInPageWrapper>
         <LoginForm onSubmit={handleOnSubmit}>
           <Logo size={45} fontSize={'3xl'} />
-          <Label>Login with Email</Label>
+          <Label>Sign up with Email</Label>
           <Input
             type='email'
             placeholder='Email'

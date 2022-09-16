@@ -14,6 +14,7 @@ export const LoginForm = styled.form`
   flex-direction: column;
   width: ${({ theme }) => theme.sizes.sm};
   max-width: 90%;
+  margin: 1rem;
   padding: 1rem;
   border-radius: 0.6rem;
   box-shadow: 0px 0px 15px gray;
@@ -33,9 +34,14 @@ export const LoginForm = styled.form`
     color: ${({ theme }) => theme.colors.teal['500']};
   }
 
+  ${({ theme }) => theme.query.MEDIA_QUERY_SM} {
+    width: ${({ theme }) => theme.sizes.xs};
+  }
+
 `
 
 export const Logo = styled.h1`
+  cursor: pointer;
   .logo {
     vertical-align: middle;
     margin: 10px;
