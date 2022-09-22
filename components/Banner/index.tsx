@@ -14,14 +14,14 @@ const Banner: React.FC<Props> = ({ isAuth }) => {
 
   const RedirectToRooms = () => router.push('./rooms');
   const RedirectToProfile = () => router.push('./profile')
-  const RedirectToSignIn = () => router.push('./signin')
+  const RedirectToLogin = () => router.push('./login')
 
   return (
     <BannerWrapper>
       <MatrixRainCanvas />
       <Logo>
-          <FaCode/>
-          <h1>Start Coding</h1>
+        <FaCode />
+        <h1>Start Coding</h1>
       </Logo>
       <p>Coder is a Realtime online code editor that you code with others.</p>
       {
@@ -33,7 +33,7 @@ const Banner: React.FC<Props> = ({ isAuth }) => {
             </ButtonGroup>
           ) :
           (
-            <Button onClick={RedirectToSignIn}>Sign In</Button>
+            <Button onClick={RedirectToLogin}>Login</Button>
           )
       }
 

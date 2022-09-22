@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
 
 
-const useWebSocket= (userID: string) => {
+const useWebSocket = (userID: string) => {
   const ws = useRef<WebSocket>()
   const [wsData, setWsData] = useState('')
   const [readyState, setReadyState] = useState(0)
@@ -10,7 +10,7 @@ const useWebSocket= (userID: string) => {
   const sendMessage = useCallback((data: string) => {
     if (readyState !== 1) {
       toast.error(`Not Connect To Server Yet! State: ${readyState}`)
-      return 
+      return
     }
     ws.current?.send(data)
   }, [ws.current, readyState])

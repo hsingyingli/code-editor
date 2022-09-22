@@ -44,7 +44,7 @@ export const Logo = styled.h1`
   cursor: pointer;
   .logo {
     vertical-align: middle;
-    margin: 10px;
+    margin: 0px;
     margin-left: 0;
     color: ${({ theme }) => theme.colors.teal['400']};
   }
@@ -52,14 +52,15 @@ export const Logo = styled.h1`
 `
 
 export const Label = styled.label`
-  margin: 0.25rem;
-  font-size: ${({ theme }) => theme.fonts.fontSizes.xl};
+  margin-bottom: 0.5rem;
+  font-size: ${({ theme }) => theme.fonts.fontSizes['2xl']};
 `
 export const Input = styled.input`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 5px;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  padding: 8px;
   font-size: ${({ theme }) => theme.fonts.fontSizes.md};
+  border: none;
   border-radius: 5px;
 `
 
@@ -84,5 +85,12 @@ export const Button = styled.button`
   ;
 `
 
+export const Info = styled.div`
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 

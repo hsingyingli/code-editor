@@ -8,19 +8,13 @@ import Layout from '../components/Layout/Main'
 
 const SignIn: NextPage = () => {
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const router = useRouter();
 
 
   const handleOnSubmit = async (event: React.FormEvent<HTMLElement>) => {
     event.preventDefault();
-    if (!email) {
-      toast.error('Room id & username is required');
-      return
-    }
-    const toastId = toast.loading('Loading...');
-
-    setEmail("")
-    toast.success('Magic Link is sent to your email. Please checkout your email', { id: toastId });
   }
 
   return (
@@ -28,13 +22,23 @@ const SignIn: NextPage = () => {
       <SignInPageWrapper>
         <LoginForm onSubmit={handleOnSubmit}>
           <Logo size={45} fontSize={'3xl'} />
-          <Label>Sign up with Email</Label>
+          <Label>Sign Up</Label>
+          <Input
+            type='text'
+            placeholder='Username'
+            value={username}
+            onChange={(e) => setUsername(e.target.value)} />
           <Input
             type='email'
             placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)} />
-          <Button type="submit">Login</Button>
+          <Input
+            type='password'
+            placeholder='Password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} />
+          <Button type="submit">SignUp</Button>
         </LoginForm>
       </SignInPageWrapper>
     </Layout>
